@@ -21,31 +21,31 @@ class TotalRuns{
 			
 			if(x==0)
 				zeroes++;
-			//System.out.println("TotalRuns:"+ total);
+			
 			else if(x==1)
 				ones++;
-			//System.out.println("TotalRuns:"+ total);
+			
 			else if(x==2)
 				twos++;
-			//System.out.println("TotalRuns:"+ total);
+			
 			if(x==3)
 				threes++;
-			//System.out.println("TotalRuns:"+ total);
+			
 			if(x==4)
 				fours++;
-			//System.out.println("TotalRuns:"+ total);
+			
 			if(x==6)
 				sixes++;
-			//System.out.println("TotalRuns:"+ total);
+			
 
 		}
 		System.out.println("TotalRuns:"+ total);
-        System.out.println("Zeroes     : " + zeroes);
-        System.out.println("Ones       : " + ones);
-        System.out.println("Twos       : " + twos);
-        System.out.println("Threes     : " + threes);
-        System.out.println("Fours      : " + fours);
-        System.out.println("Sixes      : " + sixes);
+		System.out.println("Zeroes     : " + zeroes);
+		System.out.println("Ones       : " + ones);
+		System.out.println("Twos       : " + twos);
+		System.out.println("Threes     : " + threes);
+		System.out.println("Fours      : " + fours);
+		System.out.println("Sixes      : " + sixes);
 	}
 	
 }
