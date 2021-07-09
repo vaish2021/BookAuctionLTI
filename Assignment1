@@ -1,0 +1,34 @@
+
+public class Assignment1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ElectricityBill ec = new ElectricityBill();
+		ec.noOfUnitsUsed(225);
+		ec.showBill();
+	}
+
+}
+
+class ElectricityBill{
+	double standardPricePerUnit = 1.20;
+	double totalBill;
+	void noOfUnitsUsed(long n) {
+		if(n < 100) {
+			totalBill = standardPricePerUnit * n;
+		}
+		if(n<=300) {
+			totalBill = 100 * standardPricePerUnit;
+			totalBill = totalBill + (n-100)*2;
+		}
+		if(n>300) {
+			totalBill = (n-300)*3;//25
+			totalBill = totalBill + (300 - 100)*2;
+			totalBill = totalBill+100*standardPricePerUnit;
+		}
+	}
+	void showBill() {
+		System.out.println("Total Electricity bill:" + totalBill);
+	}
+	
+}
