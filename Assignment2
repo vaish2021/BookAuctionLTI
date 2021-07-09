@@ -1,0 +1,52 @@
+import java.util.Random;
+
+public class Assignment2 {
+	public static void main (String args[]) {
+		TotalRuns r = new TotalRuns();
+		r.totalRuns();
+	}
+
+}
+
+class TotalRuns{
+	int min = 0,max = 7;
+	
+	void totalRuns() {
+		int total = 0;
+		int zeroes =0,ones=0,twos=0,threes=0,fours=0,sixes=0;
+		for(int i=1;i<=30;i++) {
+			int x= (int)(Math.random()*(max-min+1)+min);
+			System.out.println("No of runs per ball/strike rate: "+ x);
+			total = total + x;
+			
+			if(x==0)
+				zeroes++;
+			//System.out.println("TotalRuns:"+ total);
+			else if(x==1)
+				ones++;
+			//System.out.println("TotalRuns:"+ total);
+			else if(x==2)
+				twos++;
+			//System.out.println("TotalRuns:"+ total);
+			if(x==3)
+				threes++;
+			//System.out.println("TotalRuns:"+ total);
+			if(x==4)
+				fours++;
+			//System.out.println("TotalRuns:"+ total);
+			if(x==6)
+				sixes++;
+			//System.out.println("TotalRuns:"+ total);
+
+		}
+		System.out.println("TotalRuns:"+ total);
+        System.out.println("Zeroes     : " + zeroes);
+        System.out.println("Ones       : " + ones);
+        System.out.println("Twos       : " + twos);
+        System.out.println("Threes     : " + threes);
+        System.out.println("Fours      : " + fours);
+        System.out.println("Sixes      : " + sixes);
+	}
+	
+}
+
