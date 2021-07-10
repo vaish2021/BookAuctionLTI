@@ -1,0 +1,43 @@
+//import java.util.*;
+//import java.io.*;
+
+public class Assignment5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Account ac = new Account();	
+		ac.setAccountDetails(123456, 300000, "vasi@123", "SBI");
+		ac.displayAccount();
+	}
+
+}
+class Account{
+	private int accountNo;
+	private double accountBalance;
+	private String accountPassword;
+	private String bankName;
+	
+	Account(){
+		
+	}
+	public Account(int accountNo,double accountBalance,String accountPassword,String bankName) {
+		//super();
+		this.accountNo = accountNo;
+		this.accountBalance = accountBalance;
+		this.accountPassword = accountPassword;
+		this.bankName = bankName;
+	}
+	public void setAccountDetails(int acno,double acBal,String acPass,String bname) {
+		accountNo=acno;
+		accountBalance = acBal;
+		accountPassword = acPass;
+		bankName = bname;
+	}
+	
+	void displayAccount() {
+		System.out.println("Account no: "+accountNo);
+		System.out.println("Account Balance: "+accountBalance);
+		System.out.println("Account Password: "+accountPassword);
+		System.out.println("Bank Name: "+bankName);
+	}
+}
