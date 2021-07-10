@@ -1,0 +1,52 @@
+
+public class Assignment3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Innings i = new Innings();
+		i.avgRuns(10);
+	}
+}
+
+class Innings{
+	int noOfBallsPerMatch;
+	
+	void avgRuns(int noOfBallsPerMatch) {
+		int total =0;
+		int max = 7,min=0;
+		int zeros=0,ones=0,twos=0,threes=0,fours=0,sixes=0;
+		double avgStrikeRate=0;
+		for(int i=1;i<=5;i++) {
+			for(int j=0;j<noOfBallsPerMatch;j++) {
+				int x= (int)(Math.random()*(max-min+1)+min);
+				System.out.println("Strike Rate/runs per ball "+ x);
+				if(x == 0)
+					zeros++;
+				else if(x == 1)
+					ones++;
+				else if(x == 2)
+					twos++;
+				else if(x == 3)
+					threes++;
+				else if(x == 4)
+					fours++;
+				else if(x == 6)
+					sixes++;
+				total = total+x;
+				avgStrikeRate =avgStrikeRate+x;
+				avgStrikeRate = avgStrikeRate/(noOfBallsPerMatch*5);
+				
+				
+			}
+		}
+		System.out.println("Number of 0's: "+ zeros);
+		System.out.println("Number of 1's: "+ ones);
+		System.out.println("Number of 2's: "+ twos);
+		System.out.println("Number of 3's: "+ threes);
+		System.out.println("Number of 4's: "+ fours);
+		System.out.println("Number of 6's: "+ sixes);
+		System.out.println("Total runs: "+ total);
+		System.out.println("Average runs: "+ total/5);
+		System.out.println("Average strike rate: "+ avgStrikeRate);
+	}
+}
